@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hero Daily</title>
+</head>
+<body>
+    .
+    <script type="text/javascript">
+        let memberList = [
+            'Fabricio',
+            'Leandro',
+            'Bruno',
+            'Paulo',
+            'Mario',
+            'Robson',
+        ];
+
+        for (let i = memberList.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [memberList[i], memberList[j]] = [memberList[j], memberList[i]];
+        }
+
+        console.log(memberList);
+
+        document.body.innerHTML = memberList.map(member => `<p>${member}</p>`).join('');
+    </script>
+</body>
+</html>
